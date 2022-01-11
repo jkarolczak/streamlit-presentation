@@ -1,0 +1,13 @@
+name: streamlit-env
+channels:
+  - defaults
+  - conda-forge
+  - plotly
+dependencies:
+  - python=3.9
+  - numpy=1.21
+  - plotly=5.5.0
+  - pandas
+  - matplotlib
+  - protobuf
+  - streamlit
