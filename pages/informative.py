@@ -116,7 +116,7 @@ fig
 def summary():
     st.title("Summary")
     st.markdown("---")
-    st.markdown("You can find this presentation with the source code in **github.com/jkarolczak/streamlit-presentation**")
+    st.markdown("You can find this presentation with the source code on [**github.com/jkarolczak/streamlit-presentation**](github.com/jkarolczak/streamlit-presentation)")
     col1, col2, col3 = st.columns(3)
     with col1:
         st.header("Pros")
@@ -162,7 +162,7 @@ def why():
     - cannot expand acronyms like `HTML`, `CSS` or `JS`,\*
     - have no aesthetic sense,\*
     - don't know what protocols like `HTTP` and `SSL` actually do,\*
-    - have lack of time,\*
+    - suffer lack of time,\*
     - know almost nothing about requests and their types.\*
     
     *\*select all that apply*
