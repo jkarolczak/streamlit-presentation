@@ -124,7 +124,7 @@ def types_plots():
     fig.update_layout(margin=dict(l=5, r=5, t=5, b=5))
     col1.plotly_chart(fig, use_container_width=True)
     col1.code("""
-    fig = px.line(df, x='x', y='sine', title="Sine function")
+    fig = px.line(df, x='x', y='sine')
     st.plotly_chart(fig, use_container_width=True)
     """)  
 
@@ -178,11 +178,11 @@ def types_text():
     st.title("Streamlit supports many text elements")
     st.code("st.title(\"Streamlit supports many text elements\")", language="python")
     st.header("On this slide you can see differences between them")
-    st.code("st.title(\"On this slide you can see differences between them\")", language="python")
+    st.code("st.header(\"On this slide you can see differences between them\")", language="python")
     st.subheader("And get know how to use them in your own app")
     st.code("st.subheader(\"And get know how to use them in your own app\")", language="python")
-    st.markdown("If you find the *above* style inconvenient you can use **markdown** and $\LaTeX$ if you want to pretend scientist")
-    st.code("st.markdown(\"If you find the *above* style inconvenient you can use **markdown** and $\LaTeX$ if you want to pretend scientist\")")
+    st.markdown("If you find the *above* style inconvenient you can use **markdown** and $\LaTeX$ if you want to pretend a scientist")
+    st.code("st.markdown(\"If you find the *above* style inconvenient you can use **markdown** and $\LaTeX$ if you want to pretend a scientist\")")
     st.latex(r"\arctan{1} + \sum_{i=1}^{\infty} i = \frac{\pi}{4} - \frac{1}{12}")
     st.code("st.latex(r\"\\arctan{1} + \\sum_{i=1}^{\\infty} i = \\frac{\\pi}{4} - \\frac{1}{12}\")")
     st.caption("This is a caption and it claims that above you can observe many text elements and code used in the source file to display them")
