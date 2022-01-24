@@ -123,7 +123,7 @@ def summary():
         st.markdown("""
         - it's in Python
         - requires no knowledge about web development    
-        - allows crating apps in a few minutes and lines of code
+        - allows creating apps in a few minutes and lines of code
         - it's so intuitive that this presentation was created using this technology
         - easily integrates with many visualization tools
         - does many things in the background and you don't have to remember about them
