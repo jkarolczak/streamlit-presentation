@@ -1,9 +1,10 @@
 import streamlit as st
 
+
 def cloud():
     st.title("Streamlit cloud")
     st.markdown("---")
-    
+
     st.markdown("""
     - Allows deploying apps created with Streamlit.
     - Is free to use.
@@ -57,7 +58,7 @@ def config():
         main()                        
             """, language="python")
     st.markdown("[Live demo](https://share.streamlit.io/jkarolczak/streamlit-planets/main/planets.py)")
-                     
+
 
 def introduction():
     st.title("What Streamlit is?")
@@ -73,7 +74,7 @@ def introduction():
     st.markdown("""
     - It does magic.
     """)
-        
+
 
 def magic():
     st.title("Magic")
@@ -116,7 +117,8 @@ fig
 def summary():
     st.title("Summary")
     st.markdown("---")
-    st.markdown("You can find this presentation with the source code on [**github.com/jkarolczak/streamlit-presentation**](github.com/jkarolczak/streamlit-presentation)")
+    st.markdown(
+        "You can find this presentation with the source code on [**github.com/jkarolczak/streamlit-presentation**](github.com/jkarolczak/streamlit-presentation)")
     col1, col2, col3 = st.columns(3)
     with col1:
         st.header("Pros")
@@ -132,7 +134,7 @@ def summary():
         """)
         for i in range(10): st.text("")
         st.markdown("*Presentation created by Jacek Karolczak*")
-    
+
     with col2:
         st.header("Cons")
         st.markdown("""
@@ -146,8 +148,8 @@ def summary():
     with col3:
         st.image('images/qr.png')
         st.image('images/meme2.jpg')
-            
-    
+
+
 def why():
     st.title("Motivation")
     st.markdown("---")

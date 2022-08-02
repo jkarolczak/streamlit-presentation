@@ -1,11 +1,10 @@
 import json
+import pandas as pd
 import pickle
+import streamlit as st
+import sys
 from time import sleep
 
-import pandas as pd
-import streamlit as st
-
-import sys
 sys.path.append("../")
 from model import Model
 
@@ -19,14 +18,14 @@ def draw_predictions(content: str):
     col1, col2 = st.columns(2)
     results = model.infer(content)
     pd.options.plotting.backend = "plotly"
-        
+
     with col1:
         st.success("Inference succeeded. Observe the predictions below.")
         st.download_button("Download predicitons", results.to_csv(), file_name="predicitons.csv")
         st.plotly_chart(results.plot())
         st.plotly_chart(results.hist())
         st.dataframe(results)
-        
+
     with col2:
         st.code("""
 def draw_predictions(content: str):
@@ -47,7 +46,7 @@ def inference():
     st.markdown("---")
     st.header("Input")
     col1, col2 = st.columns(2)
-    
+
     form = col1.form("inference_form")
     file_val = form.file_uploader("Input data", type="json")
     if form.form_submit_button():
@@ -58,10 +57,10 @@ def inference():
         except:
             st.error("Uploading file is mandatory!")
         try:
-            draw_predictions(content)  
+            draw_predictions(content)
         except:
             pass
-                
+
     col2.code("""
 form = st.form("inference_form")
 file_val = form.file_uploader("Input data", type="json")

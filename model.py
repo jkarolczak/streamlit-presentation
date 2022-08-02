@@ -5,6 +5,7 @@ from typing import Union
 import numpy as np
 import pandas as pd
 
+
 class Model:
     def infer(self, x: Union[dict, str, np.ndarray]):
         if isinstance(x, str):
@@ -21,7 +22,8 @@ class Model:
             }
         )
         return result
-    
+
+
 if __name__ == '__main__':
     m = Model() 
     with open('model.pkl', 'wb') as fp:
